@@ -143,6 +143,14 @@ h2 {
     background-color: #1a331d;
 }
 
+.property-id {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
 .contact-info {
     background-color: #f9f9f9;
     padding: 2rem;
