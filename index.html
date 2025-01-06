@@ -1,110 +1,171 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Idaho Farms For Sale</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <h1>Idaho Farms For Sale</h1>
-            <ul>
-                <li><a href="#properties">Properties</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <main>
-        <section id="properties" class="properties-section">
-            <h2>Featured Properties</h2>
-            <div class="properties-grid">
-                <div class="property-card">
-                    <div class="property-image placeholder"></div>
-                    <div class="property-details">
-                        <h3>Mountain View Ranch</h3>
-                        <p class="price">$2,450,000</p>
-                        <p class="location">Driggs, Idaho</p>
-                        <ul class="features-list">
-                            <li>320 Acres</li>
-                            <li>Irrigation Rights</li>
-                            <li>Mountain Views</li>
-                            <li>2 Houses</li>
-                        </ul>
-                        <a href="#" class="view-details">View Details</a>
-                    </div>
-                </div>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
 
-                <div class="property-card">
-                    <div class="property-image placeholder"></div>
-                    <div class="property-details">
-                        <h3>River Valley Farm</h3>
-                        <p class="price">$1,850,000</p>
-                        <p class="location">Twin Falls, Idaho</p>
-                        <ul class="features-list">
-                            <li>160 Acres</li>
-                            <li>Snake River Frontage</li>
-                            <li>Pivot Irrigation</li>
-                            <li>Equipment Included</li>
-                        </ul>
-                        <a href="#" class="view-details">View Details</a>
-                    </div>
-                </div>
+header {
+    background-color: #2c5530;
+    padding: 1rem;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-                <div class="property-card">
-                    <div class="property-image placeholder"></div>
-                    <div class="property-details">
-                        <h3>Prairie Heritage Estate</h3>
-                        <p class="price">$3,200,000</p>
-                        <p class="location">Idaho Falls, Idaho</p>
-                        <ul class="features-list">
-                            <li>640 Acres</li>
-                            <li>Historic Barn</li>
-                            <li>Grain Storage</li>
-                            <li>Modern Facilities</li>
-                        </ul>
-                        <a href="#" class="view-details">View Details</a>
-                    </div>
-                </div>
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-                <div class="property-card">
-                    <div class="property-image placeholder"></div>
-                    <div class="property-details">
-                        <h3>Sunset Valley Ranch</h3>
-                        <p class="price">$1,650,000</p>
-                        <p class="location">Pocatello, Idaho</p>
-                        <ul class="features-list">
-                            <li>240 Acres</li>
-                            <li>Cattle Ready</li>
-                            <li>Natural Springs</li>
-                            <li>Updated Home</li>
-                        </ul>
-                        <a href="#" class="view-details">View Details</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Specializing in premium Idaho farm and ranch properties, we bring decades of agricultural real estate experience to help you find the perfect property.</p>
-        </section>
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p>Email: info@idahofarmforsale.com</p>
-                <p>Phone: (208) 555-0123</p>
-                <p>Office: 123 Main Street, Boise, ID 83702</p>
-            </div>
-        </section>
-    </main>
+nav a:hover {
+    color: #c0c0c0;
+}
 
-    <footer>
-        <p>&copy; 2025 Idaho Farms For Sale. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+h2 {
+    color: #2c5530;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.properties-section {
+    background-color: #f9f9f9;
+    margin: -2rem -2rem 4rem -2rem;
+    padding: 2rem;
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.property-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+}
+
+.property-image.placeholder {
+    background-color: #e0e0e0;
+    height: 200px;
+    width: 100%;
+}
+
+.property-details {
+    padding: 1.5rem;
+}
+
+.property-details h3 {
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c5530;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.features-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.features-list li {
+    padding: 0.25rem 0;
+    color: #555;
+}
+
+.features-list li:before {
+    content: "•";
+    color: #2c5530;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.view-details {
+    display: inline-block;
+    background-color: #2c5530;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #1a331d;
+}
+
+.property-id {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.contact-info {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2c5530;
+    color: white;
+    margin-top: 4rem;
+}
